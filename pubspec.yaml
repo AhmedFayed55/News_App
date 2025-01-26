@@ -38,7 +38,7 @@ dependencies:
   google_fonts: ^6.2.1
   cached_network_image: ^3.4.1
   get_time_ago: ^2.1.2
-  toggle_switch: ^2.3.0
+  flutter_bloc: ^9.0.0
 
 dev_dependencies:
   flutter_test:

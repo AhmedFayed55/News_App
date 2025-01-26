@@ -11,10 +11,10 @@ class ApiManager {
     Uri url = Uri.https(ApiConstants.baseUrl, ApiConstants.endPoints,
         {"apiKey": ApiConstants.apiKey, "category": categoryId});
 
-    var responce = await http.get(url);
+    var response = await http.get(url);
 
     try {
-      return SourceResponce.fromJson(jsonDecode(responce.body));
+      return SourceResponce.fromJson(jsonDecode(response.body));
     } catch (e) {
       throw e;
     }
