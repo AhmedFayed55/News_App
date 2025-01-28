@@ -6,6 +6,8 @@ import 'package:news_app/ui/home/news/cubit/news_view_model.dart';
 import 'package:news_app/ui/home/news/news_item.dart';
 import 'package:news_app/utils/App_Colors.dart';
 
+import '../../../di/di.dart';
+
 class NewsWidget extends StatefulWidget {
   Source source;
 
@@ -16,7 +18,8 @@ class NewsWidget extends StatefulWidget {
 }
 
 class _NewsWidgetState extends State<NewsWidget> {
-  NewsViewModel viewModel = NewsViewModel();
+  NewsViewModel viewModel =
+      NewsViewModel(newsRepositoryContract: injectNewsRepositoryContract());
 
   @override
   void initState() {

@@ -7,9 +7,11 @@ import 'package:news_app/ui/home/category_details/cubit/source_states.dart';
 import 'package:news_app/ui/home/category_details/source_tab_widget.dart';
 import 'package:news_app/utils/App_Colors.dart';
 
+import '../../../di/di.dart';
 
 class CategoryDetails extends StatefulWidget {
   CategoryModel category;
+  ApiManager apiManager = ApiManager();
 
   CategoryDetails({required this.category});
 
@@ -18,7 +20,8 @@ class CategoryDetails extends StatefulWidget {
 }
 
 class _CategoryDetailsState extends State<CategoryDetails> {
-  SourceDetailsViewModel sourceViewModel = SourceDetailsViewModel();
+  SourceDetailsViewModel sourceViewModel = SourceDetailsViewModel(
+      sourceRepositoryContract: injectSourceSourceRepository());
 
   @override
   void initState() {
@@ -45,7 +48,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
               Text(state.errorMessage),
               ElevatedButton(
                   onPressed: () {
-                    ApiManager.getSources(widget.category.id);
+                    widget.apiManager.getSources(widget.category.id);
                     setState(() {});
                   },
                   child: Text("Try Again"))
