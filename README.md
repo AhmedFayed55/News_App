@@ -5,6 +5,9 @@
 ✅ Clean Architecture Structure
 Built using a clean code approach to ensure scalability, readability, and separation of concerns across layers.
 
+✅ Responsive UI Design
+Designed a fully responsive user interface that adapts seamlessly to various screen sizes and orientations for an optimal reading experience.
+
 ✅ HTTP Requests & News API Integration
 Fetched news articles from an online API using the http package, supporting both general headlines and category-based filtering.
 
