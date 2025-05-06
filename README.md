@@ -1,16 +1,30 @@
-# news_app
+📱 Flutter News App Overview
 
-A new Flutter project.
+🚀 Features & Technologies Used
 
-## Getting Started
+✅ Clean Architecture Structure
+Built using a clean code approach to ensure scalability, readability, and separation of concerns across layers.
 
-This project is a starting point for a Flutter application.
+✅ HTTP Requests & News API Integration
+Fetched news articles from an online API using the http package, supporting both general headlines and category-based filtering.
 
-A few resources to get you started if this is your first Flutter project:
+✅ State Management with Cubit (Bloc)
+Handled UI and business logic efficiently using Cubit for state management, ensuring a responsive and reactive user interface.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+✅ Pagination & Debouncing
+Implemented pagination to load news articles incrementally and used debouncing to avoid excessive API calls, improving app performance.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+✅ Offline Storage with Hive
+Stored fetched news locally using the Hive package to allow users to access articles even without an internet connection.
+
+✅ Optimized Image Loading
+Used cached_network_image to efficiently load and cache article images, enhancing performance and reducing bandwidth usage.
+
+✅ Network Status Handling with connectivity_plus
+Monitored internet connection status in real-time using connectivity_plus to dynamically manage offline and online states.
+
+✅ In-App WebView
+Displayed full news articles within the app using WebView, providing users with a seamless reading experience without leaving the app.
+
+https://github.com/user-attachments/assets/9d564827-0486-49b0-8c74-721205010f1e
+
